@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    column-gap: 30px;
+    text-transform: uppercase;
+    
+}
