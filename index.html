@@ -14,131 +14,125 @@
         <h1 class="header__title"> CAT ENERGY </h1>
         <nav class="header__menu">
             <ul class="menu">
-                <li class="menu__item menu__item--active">
-                    <a class="menu__link" href="index.html"> Главная</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#">Каталог</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#">Подбор программы</a>
-                </li>
+                <li class="menu__link"><a href="index.html" class="menu__link menu__link--active" > Главная</a></li>
+                <li class="menu__link"><a href="#" class="menu__link" >Каталог</a></li>
+                <li class="menu__link"><a href="#" class="menu__link" >Подбор программы</a></li>
             </ul>
         </nav>
-
-    </header>
-    <main class="main container">
-        <section>
-            <div class="about-us">
+        <section class="about">
+            <div class="about-us__wrap-left">
                 <h2 class="about-us__title">Функциональное питание для котов</h2>
                 <p class="about-us__slogan">Занялся собой? Займись котом!</p>
-                <button class="about-us__button" type="button">Подобрать программу</button>
-                <div>
+                <button class="button" type="button">Подобрать программу</button>
+            </div>
+            <div class="about-us__wrap-right">
                     <img class="about-us__image" src="images/about_us_product.png" alt="Главаня" width="552"
                         height="499">
-                    <img class="about-us__image" src="images/about_us_cat.png" alt="Главаня" width="720" height="696">
                 </div>
-            </div>
         </section>
-        <section>
-            <div class="about-product">
+    </header>
+
+    <main class="main container">
+        <section class="about-product">
                 <h2 class="about-product__title">Как это работает?</h2>
                 <ul class="about-product__card">
                     <li class="about-product__aside">
                         <img class="about-product__image" src="images/about_product__card1.png" alt="Изображение"
                             width="80" height="80">
-                        <h3 class="about-product__subtitle">1</h3>
-                        <p class="about-product__text">Функциональное питание содержит только полезные питательные
+                        <p class="about-product__text">1. Функциональное питание содержит только полезные питательные
                             вещества</p>
                     </li>
-                </ul>
-                <ul class="about-product__card">
                     <li class="about-product__aside">
                         <img class="about-product__image" src="images/about_product__card2.png" alt="Изображение"
                             width="80" height="80">
-                        <h3 class="about-product__subtitle">2</h3>
-                        <p class="about-product__text">Выпускается в виде порошка, который необходимо лишь залить
+                        <p class="about-product__text">2. Выпускается в виде порошка, который необходимо лишь залить
                             кипятком</p>
                     </li>
-                </ul>
-                <ul class="about-product__card">
                     <li class="about-product__aside">
                         <img class="about-product__image" src="images/about_product__card3.png" alt="Изображение"
                             width="80" height="80">
-                        <h3 class="about-product__subtitle">3</h3>
-                        <p class="about-product__text">Замените один или два приема обычного корма на наше
+                        <p class="about-product__text">3. Замените один или два приема обычного корма на наше
                             функциональное питание</p>
                     </li>
-                </ul>
-                <ul class="about-product__card">
                     <li class="about-product__aside">
                         <img class="about-product__image" src="images/about_product__card4.png" alt="Изображение"
                             width="80" height="80">
-                        <h3 class="about-product__subtitle">4</h3>
-                        <p class="about-product__text">Уже через месяц наслаждайтесь изменением к лучшему вашего
+                        <p class="about-product__text">4. Уже через месяц наслаждайтесь изменением к лучшему вашего
                             питомца!</p>
                     </li>
                 </ul>
-            </div>
         </section>
 
-        <section class="program">
-            <div class="program">
-                <h2 class="program__title"> Выбор программы</h2>
+        <section class="program"> 
                 <ul class="program__list">
                     <li class="program__item">
-                        <button class="program__button" type="button">Похудение</button>
-                    </li>
-                    <li class="program__item">
+                        <h2 class="product__title">похудение</h2>
                         <img class="program__image" src="images/program_skinny.png" alt="Изображение" width="100"
                             height="106">
                         <p class="program__text">Ваш питоимец почти утратил способность лазить по деревьям, потому
                             что его вес больше оптимального? Пора на диету! Cat Energy Slim поможет вашему питомцу
                             сбросить лишний вес!</p>
+                        <button class="program__button button button--accent" type="button">Каталог SLIM →</button>
                     </li>
                 <li class="program__item">
-                    <button class="program__button" type="button">Набор массы</button>
-                </li>
-
-                <li class="program__item">
+                    <h2 class="product__title">набор массы</h2>
                     <img class="program__image" src="images/program_weight.png" alt="Изображение" width="134"
                         height="100">
                     <p class="program__text">Питомец желает заработать авторитет среди дворовых котов и даже
                         собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+                    <button class="program__button button button--accent" type="button">Каталог PRO →</button>
                 </li>
                 </ul>
-            </div>
+                
         </section>
 
         <section class="example">
-            <div class="example__wrapper">
+            <div class="example__wrap-left">
                 <h2 class="example__title">Живой пример</h2>
                 <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
                     Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и
                     по-прежнему спит по 16 часов в день.</p>
-                <p class="example__text"><b>5 кг</b></p>
-                <p class="example__text">Снижение веса</p>
-                <p class="example__text"><b>60 дней</b></p>
-                <p class="example__text">Затрачено времени</p>
-                <p class="example__text">ЗАТРАТЫ НА ПИТАНИЕ: 15 000 РУБ.</p>
+
+                    <ul class="example__list">
+                        <li class="example__item">
+                            <p class="example__text-result"><b>5 кг</b></p>
+                            <p class="example__text-title">Снижение веса</p>
+                        </li>
+                        <li>
+                            <p class="example__text-result"><b>60 дней</b></p>
+                            <p class="example__text-title">Затрачено времени</p>
+                        </li>
+                    </ul>      
+                <p class="example__text-cost">ЗАТРАТЫ НА ПИТАНИЕ: 15 000 РУБ.</p>
+            </div>
+            <div class="example__wrap-right">
                 <img class="example__image" src="images/example_image.png" alt="изображение" width="690" height="656">
             </div>
         </section>
+
         <section class="contact">
-            <h4 class="contact__title">ПРИГЛАШАЕМ К СОТРУДНИЧЕСТВУ ДИЛЕРОВ!</h4>
-            <p>ул.Большая Конюшенная, д.19/8 Санкт-Петербург</p>
-            <iframe
+            <div class="contact">
+                <p class="contact__title">ПРИГЛАШАЕМ К СОТРУДНИЧЕСТВУ ДИЛЕРОВ!</p>
+                <p class="address">ул.Большая Конюшенная, д.19/8 Санкт-Петербург</p>
+            </div>
+            <div class="map">
+                <iframe
                 src="https://yandex.ru/map-widget/v1/?um=constructor%3A25bbc9babde558d7893a682cbd89b6a23949e1eb519a4ad44637939cf65c48bb&amp;source=constructor"
-                width="1440" height="400" frameborder="0"></iframe>
+                width="1440" height="400" frameborder="0">
+                </iframe>
+        </div>
         </section>
     </main>
+
     <footer class="footer container">
         <p class="footer__text">Сайт создан Мазуровой Л., Конышевой В., Галиуллиной М.</p>
         <ul class="footer__item">
             <li class="footer__item">
                 <a class="footer__link" href="#">Пользовательское соглашение</a>
             </li>
-            <li><a class="footer__link" href="#">Политика конфиденциальности</a></li>
+            <li>
+                <a class="footer__link" href="#">Политика конфиденциальности</a>
+            </li>
         </ul>
     </footer>
 </body>

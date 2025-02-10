@@ -11,3 +11,8 @@
 /*Подключение универсальных стилей */
 @import "typography.css";
 
+/* Подключение анимаций */
+@import "animation.css";
+
+/* Подключение стилей отвечающих за адаптив */
+@import "adaptability.css"

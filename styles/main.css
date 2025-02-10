@@ -1,0 +1,152 @@
+.about{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    background-color: none;
+    color: black;
+    padding: 10px;
+}
+
+.about__wrap-right{
+    width: 1330px;
+    flex-shrink: 0;
+}
+
+.about-product__card{
+   display: grid;
+    grid-template-columns: repeat(4, 260px);
+    gap: 29px;
+    padding-left: 0;
+    margin-top: 46px;
+
+    list-style: none;
+}
+
+.about-product__text{
+    margin-top: 14px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-style: arial;
+    text-align: left;
+}
+
+.about-product__aside {
+    padding: 24px 24px 34px;
+    border-radius: 24px;
+    background-color: #ffffff;
+    box-shadow: 0 16px 72px 0 rgba(34, 39, 47, 0.05);
+}
+
+.program__list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding-left: 0;
+    margin-top: 46px;
+    list-style: none;
+    width: 100%;
+}
+
+.program__item {
+    padding: 24px 24px 34px;
+    background-color: #f2f2f2;
+}
+
+.program__text {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-style: arial;
+    text-align: left;
+}
+
+.program__button {
+    display: block;
+    padding: 10px;
+    color: #444444;
+    background-color: #f2f2f2;
+    text-decoration: none;
+    margin-top: auto;
+    margin-right: auto;
+    border: none;
+}
+
+.example{
+    display: flex;
+    gap: 10px;
+   }
+   
+.about__wrap-right{
+    width: 690px;
+    flex-shrink: 0;
+   }
+
+.example{
+    background-color: #f2f2f2;
+     color: #444444;
+     padding: 10px;
+    }
+    
+
+.example__text {
+    font-size: 16px;
+    font-style: arial;
+    margin-top: 0; 
+    margin-bottom: 0;
+    margin-left: 40px;
+
+}
+
+.example__list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding-left: 0;
+    margin-top: 46px;
+    list-style: none;
+    width: 100%;
+}
+
+.example__text-result {
+    font-size: 30px;
+    border: 1px solid #cdcdcd;
+    padding: 10px;
+    border-radius: 10 px;
+    margin-top: 0; 
+    margin-bottom: 0;
+    margin-left: 40px;
+    border-bottom: none;
+    
+}
+
+.example__text-title {
+    font-size: 14px;
+    margin-top: 0; 
+    margin-bottom: 0;
+    margin-left: 45px;
+}
+
+.example__text-cost {
+    font-size: 20px;
+    margin-top: 10; 
+    margin-bottom: 0;
+    margin-left: 40px;
+}
+
+.contact{
+    background-color: #ffffff;
+     color: #444444;
+     padding: 0px;
+}
+
+.address{
+    font-size: 16px;
+    font-style: arial;
+    margin-top: 0; 
+    margin-bottom: 10px;
+    float: right;
+}
+
+
+
+
