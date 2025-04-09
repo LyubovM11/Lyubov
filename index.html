@@ -46,13 +46,13 @@
                         <img class="about-product__image" src="images/about_product__card2.png" alt="Изображение"
                             width="80" height="80">
                         <p class="about-product__text">2. Выпускается в виде порошка, который необходимо лишь залить
-                            кипятком</p>
+                            кипятком</p> 
                     </li>
                     <li class="about-product__aside">
                         <img class="about-product__image" src="images/about_product__card3.png" alt="Изображение"
                             width="80" height="80">
                         <p class="about-product__text">3. Замените один или два приема обычного корма на наше
-                            функциональное питание</p>
+                            функциональное питание</p> 
                     </li>
                     <li class="about-product__aside">
                         <img class="about-product__image" src="images/about_product__card4.png" alt="Изображение"
@@ -83,32 +83,47 @@
                     <button class="program__button button button--accent" type="button">Каталог PRO →</button>
                 </li>
                 </ul>
-                
         </section>
-
+            
         <section class="example">
-            <div class="example__wrap-left">
-                <h2 class="example__title">Живой пример</h2>
-                <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-                    Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и
-                    по-прежнему спит по 16 часов в день.</p>
-
-                    <ul class="example__list">
-                        <li class="example__item">
-                            <p class="example__text-result"><b>5 кг</b></p>
-                            <p class="example__text-title">Снижение веса</p>
-                        </li>
-                        <li>
-                            <p class="example__text-result"><b>60 дней</b></p>
-                            <p class="example__text-title">Затрачено времени</p>
-                        </li>
-                    </ul>      
-                <p class="example__text-cost">ЗАТРАТЫ НА ПИТАНИЕ: 15 000 РУБ.</p>
+            <div class="example__container container">
+                <h2 class="example__title title">Живой пример</h2>
+                <div class="example__info">
+                    <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+                    <div class="example__results results">
+                        <dl class="results__list">
+                            <div class="results__item">
+                                <dt class="results__value">5 кг</dt>
+                                <dd class="results__description">снижение веса</dd>
+                            </div>
+                            <div class="results__item">
+                                <dt class="results__value">60 дней</dt>
+                                <dd class="results__description">затрачено времени</dd>
+                            </div>
+                        </dl>
+                            <p class="results__total">
+                                Затраты на питание: <span class="results__total-price">15 000 РУБ.</span>
+                            </p>
+                    </div>
+                </div>
+                <div class="example__comparison comparison">
+                    <div class="comparison__picture-wrapper">
+                        <div class="comparison__picture-inner">
+                            <img class="comparison__image-before" src="images/cat-before.png" alt="Фото кота Бориса до диеты" width="287" height="232">
+                            <img class="comparison__image-after" src="images/cat-after.png" alt="Фото кота Бориса после диеты" width="287" height="232">
+                        </div>
+                    </div>
+                    <div class="comparison__control">
+                        <button class="comparison__button comparison__button--before">Стало</button>
+                        <div class="comparison__bar">
+                            <div class="comparison__toggle" style="transform: translateX(0%);"></div>
+                            <input class="comparison__range input-range" type="range" min="0" max="100" value="50" step="1">
+                        </div>
+                            <button class="comparison__button comparison__button--after">Было</button>
+                    </div>
+                </div>
             </div>
-            <div class="example__wrap-right">
-                <img class="example__image" src="images/example_image.png" alt="изображение" width="690" height="656">
-            </div>
-        </section>
+        </section>                    
 
         <section class="contact">
             <div class="contact">
