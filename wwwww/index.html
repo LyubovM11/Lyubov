@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header class="header container">
+        <h1 class="header__title"> CAT ENERGY </h1>
+        <nav class="header__menu">
+            <ul class="menu">
+                <li class="menu__link"><a href="index.html" class="menu__link menu__link--active" > Главная</a></li>
+                <li class="menu__link"><a href="#" class="menu__link" >Каталог</a></li>
+                <li class="menu__link"><a href="#" class="menu__link" >Подбор программы</a></li>
+            </ul>
+        </nav>
+        <section class="about">
+            <div class="about-us__wrap-left">
+                <h2 class="about-us__title">Функциональное питание для котов</h2>
+                <p class="about-us__slogan">Занялся собой? Займись котом!</p>
+                <button class="welcome__button button" type="button">Подобрать программу</button>
+            </div>
+            <div class="about-us__wrap-right">
+                    <img class="about-us__image" src="images/about_us_product.png" alt="Главаня" width="552"
+                        height="499">
+                </div>
+        </section>
+    </header>
+        <div class="applications" hidden>
+            <section class="application">
+                <div class="application__wrap">
+                    <h3 class="application__title">
+                        Отставьте заявку и наши специалисты свяжутся с вами для выбора программы
+                    </h3>
+                    <p class="application__text">Для новых клиентов скидка 10% на всю корзину!</p>
+                </div>
+                <div>
+                <button class="application__close button" type="button">Закрыть</button>
+                <form action="/" class="application__form">
+                    <input class="application__input" type="text" placeholder="ФИО">
+                    <input class="application__input" type="tel" placeholder="Номер телефона">
+                    <input class="application__input" type="email" placeholder="E-mail">
+                    <button class="application__button button">Отправить заявку</button>
+                </form>
+            </div>
+            </section>
+        </div>
+    <main class="main container">
+        <section class="about-product">
+                <h2 class="about-product__title">Как это работает?</h2>
+                <ul class="about-product__card">
+                    <li class="about-product__aside">
+                        <img class="about-product__image" src="images/about_product__card1.png" alt="Изображение"
+                            width="80" height="80">
+                        <p class="about-product__text">1</p>
+                    </li>
+                    <li class="about-product__aside">
+                        <img class="about-product__image" src="images/about_product__card2.png" alt="Изображение"
+                            width="80" height="80">
+                        <p class="about-product__text">2</p> 
+                    </li>
+                    <li class="about-product__aside">
+                        <img class="about-product__image" src="images/about_product__card3.png" alt="Изображение"
+                            width="80" height="80">
+                        <p class="about-product__text">3</p> 
+                    </li>
+                    <li class="about-product__aside">
+                        <img class="about-product__image" src="images/about_product__card4.png" alt="Изображение"
+                            width="80" height="80">
+                        <p class="about-product__text">4</p>
+                    </li>
+                </ul>
+        </section>
+
+        <section class="program"> 
+                <ul class="program__list">
+                    <li class="program__item">
+                        <h2 class="product__title">Похудение</h2>
+                        <img class="program__image" src="images/program_skinny.png" alt="Изображение" width="100"
+                            height="106">
+                        <p class="program__text">Ваш питоимец почти утратил способность лазить по деревьям, потому
+                            что его вес больше оптимального? Пора на диету! Cat Energy Slim поможет вашему питомцу
+                            сбросить лишний вес!</p>
+                        <button class="program__button button button--accent" type="button">Каталог SLIM →</button>
+                    </li>
+                <li class="program__item">
+                    <h2 class="product__title">Набор массы</h2>
+                    <img class="program__image" src="images/program_weight.png" alt="Изображение" width="134"
+                        height="100">
+                    <p class="program__text">Питомец желает заработать авторитет среди дворовых котов и даже
+                        собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+                    <button class="program__button button button--accent" type="button">Каталог PRO →</button>
+                </li>
+                </ul>
+        </section>
+            
+        <section class="example">
+            <div class="example__container container">
+                <h2 class="example__title title">Живой пример</h2>
+                <div class="example__info">
+                    <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+                    <div class="example__results results">
+                        <dl class="results__list">
+                            <div class="results__item">
+                                <dt class="results__value">5 кг</dt>
+                                <dd class="results__description">снижение веса</dd>
+                            </div>
+                            <div class="results__item">
+                                <dt class="results__value">60 дней</dt>
+                                <dd class="results__description">затрачено времени</dd>
+                            </div>
+                        </dl>
+                            <p class="results__total">
+                                Затраты на питание: <span class="results__total-price">15 000 РУБ.</span>
+                            </p>
+                    </div>
+                </div>
+                <div class="example__comparison comparison">
+                    <div class="comparison__picture-wrapper">
+                        <div class="comparison__picture-inner">
+                            <img class="comparison__image-before" src="images/cat-before.png" alt="Фото кота Бориса до диеты" width="287" height="232">
+                            <img class="comparison__image-after" src="images/cat-after.png" alt="Фото кота Бориса после диеты" width="287" height="232">
+                        </div>
+                    </div>
+                    <div class="comparison__control">
+                        <button class="comparison__button comparison__button--before">Стало</button>
+                        <div class="comparison__bar">
+                            <div class="comparison__toggle" style="transform: translateX(0%);"></div>
+                            <input class="comparison__range input-range" type="range" min="0" max="100" value="50" step="1">
+                        </div>
+                            <button class="comparison__button comparison__button--after">Было</button>
+                    </div>
+                </div>
+            </div>
+        </section>                    
+
+        <section class="contact">
+            <div class="contact">
+                <p class="contact__title">ПРИГЛАШАЕМ К СОТРУДНИЧЕСТВУ ДИЛЕРОВ!</p>
+                <p class="address">ул.Большая Конюшенная, д.19/8 Санкт-Петербург</p>
+            </div>
+            <div class="map">
+                <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A25bbc9babde558d7893a682cbd89b6a23949e1eb519a4ad44637939cf65c48bb&amp;source=constructor"
+                width="100%" height="400" frameborder="0">
+                </iframe>
+        </div>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <p class="footer__text">Сайт создан Мазуровой Л., Конышевой В., Галиуллиной М.</p>
+        <ul class="footer__item">
+            <li class="footer__item">
+                <a class="footer__link" href="#">Пользовательское соглашение</a>
+            </li>
+            <li>
+                <a class="footer__link" href="#">Политика конфиденциальности</a>
+            </li>
+        </ul>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
