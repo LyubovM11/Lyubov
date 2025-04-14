@@ -86,3 +86,54 @@ titleAboutProduct.forEach((item, index) => {
            });
     }
 
+
+
+
+ //Объявляем переменную headerMenu и сохраняем в нее header__menu
+const headerMenu = document.querySelector('.header__menu');
+// Если такой элемент существует
+if (headerMenu){
+//Объявляем переменную headerList и сохраняем в нее header__list, чтобы мы могли добавить новые элементы
+        const menu = headerMenu.querySelector('.menu');
+
+//Создаем объект menuData, который содержит данные для трех ссылок меню.
+        const menuData = {
+// Каждая ссылка содержит link (адрес ссылки; если ссылка никуда не ведет, то можно оставить #) и title (текст ссылки).
+            link1: {
+                CSSclass: "menu__link--active",
+                link: 'index.html',
+                title: 'Главная',
+            },
+            link2: {
+                link: '#',
+                title: 'Каталог',
+            },
+            link3: {
+                link: '#',
+                title: 'Подбор программы',
+            }
+        
+        }
+
+
+//Создаем функцию createLink, которая будет добавлять ссылку в меню. Внутри функции 2 переменные: UrlLink – адрес, а title — текст ссылки.
+        const createLink = (UrlLink, title, CSSclass) =>{
+// создаем переменную  link, которая будет содержать HTML-код ссылки и вставляем в него 2 переменные
+            const link = `
+            <li class="menu__item"><a href="${UrlLink}" class="menu__link ${CSSclass}">${title}</a></li>
+            `;
+            return link;
+        }
+
+// Создаем цикл for и проходим по всем элементам объекта menuData.
+        for (const linkItem in menuData) {
+//Получаем данные для ссылки и сохраняем в переменную link.
+            const link = menuData[linkItem];
+//Создаем переменную linkIndex и вызываем функцию createLink, куда передаем адрес и заголовок.
+            const linkIndex = createLink(link.UrlLink, link.title, link.CSSclass);
+// С помощью метода insertAdjacentHTML добавляем созданный HTML-код в конец списка headerList.
+            menu.insertAdjacentHTML('beforeend', linkIndex);
+
+        }
+}
+
