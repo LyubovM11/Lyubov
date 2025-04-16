@@ -2,6 +2,34 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log('Скрипт отработал правильно')
+
+
+    // 3-7-1 Карусель (слайдер)
+    const slider = document.querySelector('.swiper');
+    console.log("slider", slider);
+    if (slider) {
+        console.log("slider", slider);
+        const swiper = new Swiper(slider, {
+            // Дополнительные параметры
+            slidesPerView: 4, // Количество слайдов на экране
+            spaceBetween: 30, // Расстояние между слайдами
+            loop: true,  // Зацикливание слайдов
+
+            // Пагинация
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Навигационные стрелки
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        }); 
+    }
+
+ 
+
 });
 
 // * 1. Начало
@@ -60,6 +88,81 @@ closeModalButton.addEventListener("click", () => {
     modalApplication.setAttribute("hidden", true);
 });
 
+   // 3-7-2 Отправка данных на форме регистрации
+   const modalForm = document.querySelector(".application__form");
+
+   console.log("modalForm");
+   modalForm.addEventListener('submit', event => {
+    event.preventDefault();
+    console.log("Отправка формы");
+      
+    const username = document.querySelector('#username').value;
+    const phone = document.querySelector('#phone').value;
+    const email = document.querySelector('#email').value;
+    // скрипт код
+    console.log(username);
+    console.log(phone);
+    console.log(email);
+
+    // Запишем логин
+    if(username && phone && email) {    
+        window.localStorage.setItem("username", username);
+        window.localStorage.setItem("phone", phone);
+        window.localStorage.setItem("email", email);
+        document.querySelector('#error-message').removeAttribute('hidden');
+        // alert("Данные сохранились");
+    } else {
+        alert("Одно из полей не заполненно");
+    }
+
+
+   });
+
+   if(false){
+    modalForm.addEventListener('submit', event => {
+        event.preventDefault(); // Предотвращаем отправку формы
+   
+        const username = modalForm.querySelector('#username').value;
+        const phone = modalForm.querySelector('#phone').value;
+        const email = modalForm.querySelector('#email').value;
+   
+        const errorMessage = modalForm.querySelector('#error-message');
+   
+        if (username.length < 3) {
+            errorMessage.textContent = 'Имя пользователя должно содержать не менее 3 символов';
+            return;
+        }
+   
+        if (phone.length < 10) {
+            errorMessage.textContent = 'Некорректный номер телефона';
+            return;
+        }
+        if (email.length < 10) {
+            errorMessage.textContent = 'Некорректный адрес электронной почты';
+            return;
+        }
+   
+        // Здесь можно добавить отправку данных на сервер
+        errorMessage.textContent = 'Регистрация прошла успешно!';
+        errorMessage.style.color = 'green';
+   
+        // Запишем логин
+        window.localStorage.setItem("username", username);
+        window.localStorage.setItem("phone", phone);
+        window.localStorage.setItem("email", email);
+   
+        // Очистка формы
+        document.getElementById('registration-form').reset();
+    });
+   
+   }
+
+
+
+
+
+
+
 
 //Объявляем переменную AboutProductContainer и сохраняем в нее элементы about-product
 const AboutProductContainer = document.querySelector(".about-product__card");
@@ -72,6 +175,7 @@ const AboutProductContainer = document.querySelector(".about-product__card");
             "2. Выпускается в виде порошка, который необходимо лишь залить кипятком",
             "3. Замените один или два приема обычного корма на наше функциональное питание",
             "4. Уже через месяц наслаждайтесь изменением к лучшему вашего питомца!",
+            "5. Сократите свои расходы на тонну витаминов для питомца!",
         ];
 
 //Объявляем переменную title.AboutProduct и сохраняем в нее все элементы на странице с классом treners__subtitle (где должны стоять имена тренеров)
@@ -88,9 +192,8 @@ titleAboutProduct.forEach((item, index) => {
 
 
 
-
  //Объявляем переменную headerMenu и сохраняем в нее header__menu
-const headerMenu = document.querySelector('.header__menu');
+/* const headerMenu = document.querySelector('.header__menu');
 // Если такой элемент существует
 if (headerMenu){
 //Объявляем переменную headerList и сохраняем в нее header__list, чтобы мы могли добавить новые элементы
@@ -99,7 +202,8 @@ if (headerMenu){
 //Создаем объект menuData, который содержит данные для трех ссылок меню.
         const menuData = {
 // Каждая ссылка содержит link (адрес ссылки; если ссылка никуда не ведет, то можно оставить #) и title (текст ссылки).
-            link1: {
+
+link1: {
                 CSSclass: "menu__link--active",
                 link: 'index.html',
                 title: 'Главная',
@@ -111,10 +215,9 @@ if (headerMenu){
             link3: {
                 link: '#',
                 title: 'Подбор программы',
-            }
-        
-        }
+            } 
 
+}
 
 //Создаем функцию createLink, которая будет добавлять ссылку в меню. Внутри функции 2 переменные: UrlLink – адрес, а title — текст ссылки.
         const createLink = (UrlLink, title, CSSclass) =>{
@@ -124,6 +227,7 @@ if (headerMenu){
             `;
             return link;
         }
+
 
 // Создаем цикл for и проходим по всем элементам объекта menuData.
         for (const linkItem in menuData) {
@@ -136,4 +240,60 @@ if (headerMenu){
 
         }
 }
+*/ 
+
+const headerMenu = document.querySelector('.header__menu');
+if (headerMenu) {
+    const menu = headerMenu.querySelector('.menu');
+
+    // Пример URL для получения данных с сервера
+    const apiUrl = 'data.json';
+
+    const createLink = (linkUrl, title, CSSclass) => {
+
+        // Шаблонные строки и подстановки
+        const menuData = `
+            <li class="menu__item"><a href="${linkUrl}" class="menu__link ${CSSclass}" >${title}</a></li>
+        `;
+        return menuData;
+    }
+
+    // Загрузка данных с сервера
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data); // Данные
+            console.log(typeof (data)); // Тип полученных данных
+
+            data.forEach(link => {
+                const linkIndex = createLink(link.UrlLink, link.title, link.CSSclass);
+                menu.insertAdjacentHTML('beforeend', linkIndex);
+            });
+        })
+        .catch(error => {
+            console.error('Ошибка при загрузке данных:', error);
+        });
+}
+
+    // Preloader страницы
+    const preloader = document.querySelector('.preloader');
+    const content = document.querySelector('.content');
+    if (preloader && content) {
+        setTimeout(() => {
+            // Скрываем прелоадер
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+
+            // Показываем контент
+            content.style.display = 'block';
+
+            // Удаляем элемент из DOM
+            preloader.remove();
+        }, 1000); // Задержка 3 секунды
+    }
+
+
+
+
+
 
